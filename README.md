@@ -1,9 +1,9 @@
-# Step-by-Step WebGPU Graphics Programming (16) 
-## Create a torus Wireframe
+# Step-by-Step WebGPU Graphics Programming (22) 
+## Create a torus with Lighting Effect
 
-This is the source code for the 16th part of a series YouTube videos on step-by-step WebGPU graphics programming.
+This is the source code for the 22th part of a series YouTube videos on step-by-step WebGPU graphics programming.
 
-This sample WebGPU app creates a torus wireframe. The output from the app is shown in the following image.
+This sample WebGPU app creates a torus with lighting effect. The output from the app is shown in the following image.
 
 ![image01](dist/assets/image01.png)
 
