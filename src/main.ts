@@ -1,6 +1,7 @@
 import { CreateShapeWithLight } from './light';
 import { LightInputs } from './shaders';
 import { TorusData } from './vertex_data';
+import { ResizeFunction } from './helper';
 import $ from 'jquery';
 
 const CreateShape = async (li:LightInputs, rlarge = 1.5, rsmall = 0.4, nlarge = 100, nsmall = 50, isAnimation = true) => {
@@ -39,10 +40,4 @@ $('#btn-redraw').on('click', function(){
     CreateShape(li, rlarge, rsmall, nlarge, nsmall, isAnimation);
 });
 
-let timeoutId: any;
-window.addEventListener('resize', function(){
-    this.clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-        CreateShape(li, rlarge, rsmall, nlarge, nsmall, isAnimation);
-    }, 100);
-});
+ResizeFunction(CreateShape, [li, rlarge, rsmall, nlarge, nsmall, isAnimation]);

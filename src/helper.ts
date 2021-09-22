@@ -157,3 +157,13 @@ export const CheckWebGPU = () => {
     
     return result;
 };
+
+export const ResizeFunction = (f: any, args:any) =>{
+    let timeoutId: any;
+    window.addEventListener('resize', function(){
+        this.clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            f.apply(this, args);
+        }, 100);
+    });
+}
