@@ -38,3 +38,11 @@ $('#btn-redraw').on('click', function(){
     nsmall = parseInt($('#id-nsmall').val()?.toString()!);
     CreateShape(li, rlarge, rsmall, nlarge, nsmall, isAnimation);
 });
+
+let timeoutId: any;
+window.addEventListener('resize', function(){
+    this.clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+        CreateShape(li, rlarge, rsmall, nlarge, nsmall, isAnimation);
+    }, 100);
+});
